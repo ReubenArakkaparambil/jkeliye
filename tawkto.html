@@ -64,111 +64,38 @@ s0.parentNode.insertBefore(s1,s0);
 </div>
 </div>
 </nav>
+<p>Want something you wanna enlist here?</p>
+<p>To add properties, log in to your tawk.to account</p>
 
-<div class="section1">
-  <div class="text">RentUp</div>
-</div>
-<div class="section2">
-  <div class="text" style ="font-size:2.2rem; display:inline;">"Finding a place that won't eat your ramen budget. That's us."</div>
-</div>
+<form id="userInfoForm">
+<label for="imageURL">Image URL:</label>
+<input type="text" id="imageURL" placeholder="Enter image URL">
 
-<section id = "Homepage">
-  <div class="forbimage">
+<label for="userName">Name:</label>
+<input type="text" id="userNameInput" placeholder="Enter name">
 
-    <div class="textsaboutus">
-      <h2 class="HPslogan">"Finding a place that won't eat your ramen budget. That's us."</h2>
+<label for="userLocation">Location:</label>
+<input type="text" id="userLocationInput" placeholder="Enter location">
 
-      <br>
+<button type="button" onclick="displayUserCard()">Display User Card</button>
+</form>
 
-      <div class="search-container">
-    <input type="text" class="search-input" placeholder="Search properties...">
-  <div >
-    <a href="#" class="search-button">Search</a>
-  </div>
 
-  </div>
+  <a href="https://dashboard.tawk.to/login"class="labelling">Add Properties</a>
+<div class="row">
+  <div class="container-fluid">
+    <div class="cardprop">
+
+      <img id="userImage" alt="User Image">
+      <h2 id="userName"></h2>
+      <p id="userLocation"></p>
+      <button name="button">Chat with Owner</button>
 
 
     </div>
-  </div>
-</section>
 
-<br><br><br><br>
-<section id="offerings">
-  <h1 id="offeringsmaintitle">Our Services</h1>
-  <h5 id="offeringsdescription">"More services than your campus Wi-Fi has disconnections. And that's saying something."
-</h5>
-  <div class="container-fluid">
-    <div class="row">
-  <div class="col-lg-6 col-md-6 col-sm-3 centerkarega card" id="electricity-card">
-    <h4 class="headerofcards"><i class="fa-solid fa-2x fa-bolt  goocolour lightning"></i><br><br>Electricity</h4>
-    <p class="descriptionofcards">"Empowering your world, one switch at a time!"</p>
-  </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 centerkarega card" id="sim-services-card">
-    <h4 class="headerofcards"><br><i class="fa-solid fa-2x fa-mobile-screen-button goocolour"></i><br><br>Sim Services</h4>
-    <p class="descriptionofcards">"Connecting you, effortlessly, wherever you go!"</p>
-  </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 centerkarega card" id="broadband-card">
-    <h4 class="headerofcards"><br><i class="fa-solid fa-2x fa-wifi goocolour"></i><br><br>Broadband </h4>
-    <p class="descriptionofcards">"Surf at the speed of life: Broadband that bridges every byte!"</p>
-  </div>
-  <div class="col-lg-3 col-md-6 col-sm-6 centerkarega card" id="bank-card">
-    <h4 class="headerofcards"><br><i class="fa-solid fa-2x fa-building-columns goocolour"></i><br><br>Bank </h4>
-    <p class="descriptionofcards">"Banking on excellence, shaping your financial journey!"</p>
   </div>
 </div>
-
-<br><br><br>
-  </div>
-</section>
-
-
-<section class="flipcards">
-  <br><br>
-  <h1 id="offeringsmaintitle">Our Reviews</h1>
-  <div class="container-fluid">
-    <div class="row">
-  <div class="maincontainer">
-
-        <div class="thecard">
-
-          <div class="thefront">
-            <img src="https://img.freepik.com/free-photo/portrait-handsome-young-european-man-looks-directly-camera-with-serious-expression-feels-self-confident-wears-round-transparent-glasses-casual-sweater-isolated-beige-background_273609-56727.jpg" class="cardphotu">
-            <h1 class="fchead">Allen Dsouza</h1>
-            <p class="fcdes">Documentaion Head, CSI</p>
-          </div>
-
-          <div class="theback">
-            <h1>⭐⭐⭐⭐</h1>
-            <p class="fcdes">"RentUp was a game-changer for my housing search.<br> <br>Found a place that's not just a house but a home.<br> <br>The chat feature helped me connect with awesome roommates. Plus, the added services like broadband made settling in a breeze. <br><br>Highly recommend for all students navigating the housing maze!"</p>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="maincontainer">
-
-            <div class="thecard">
-
-              <div class="thefront">
-                <img src="https://th.bing.com/th/id/OIP.waIVBQSYCgn0D25uxEIX-QHaEo?w=313&h=195&c=7&r=0&o=5&pid=1.7" class="cardphotu">
-                <h1 class="fchead">Madhura Manav</h1>
-                <p class="fcdes">PR Head, DBTech</p>
-              </div>
-
-              <div class="theback">
-                <h1>⭐⭐⭐⭐⭐</h1>
-                <p class="fcdes">"As an international student, finding accommodation was my biggest concern.<br> <br>The search filters are spot-on, and the community chat helped me find roommates who are now like family.<br> <br>The website's additional services also saved me from the hassle of setting up utilities. RentUp, you made my transition seamless!" </p>
-              </div>
-
-            </div>
-          </div>
-
-
-
-      </div>
-      </div>
-</section>
 
 <footer id="footer">
   <div class="container-fluid">
@@ -221,6 +148,23 @@ s0.parentNode.insertBefore(s1,s0);
 
 </footer>
 
+<script>
+
+  function displayUserCard() {
+      var imageURL = document.getElementById('imageURL').value;
+      var userName = document.getElementById('userNameInput').value;
+      var userLocation = document.getElementById('userLocationInput').value;
+
+      // Display user information in the card
+      document.getElementById('userImage').src = imageURL;
+      document.getElementById('userName').innerText = userName;
+      document.getElementById('userLocation').innerText = userLocation;
+
+      // Show the user card
+      document.getElementById('userCard').style.display = 'block';
+    }
+
+</script>
 
 
 </body>
